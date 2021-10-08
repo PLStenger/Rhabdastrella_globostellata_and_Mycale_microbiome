@@ -5,7 +5,8 @@ OUTPUT=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data
 
 METADATA=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/07_01_Rhabdastrella_globostellata_and_Mycale_microbiome/Rhabdastrella_globostellata_and_Mycale_microbiome/98_database_files/sample-metadata.tsv
 # negative control sample :
-NEG_CONTROL=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/07_01_Rhabdastrella_globostellata_and_Mycale_microbiome/Rhabdastrella_globostellata_and_Mycale_microbiome/98_database_files/Negative_control_Sample_RepSeq_V4.qza
+#NEG_CONTROL=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/07_01_Rhabdastrella_globostellata_and_Mycale_microbiome/Rhabdastrella_globostellata_and_Mycale_microbiome/98_database_files/Negative_control_Sample_RepSeq_V4.qza
+NEG_CONTROL=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/07_01_Rhabdastrella_globostellata_and_Mycale_microbiome/Rhabdastrella_globostellata_and_Mycale_microbiome/98_database_files/SILVA-138-SSURef-Full-Seqs.qza
 
 # https://chmi-sops.github.io/mydoc_qiime2.html
 
@@ -52,14 +53,11 @@ qiime quality-control exclude-seqs --i-query-sequences core/RepSeq.qza \
       					     --i-reference-sequences $NEG_CONTROL \
       					     --p-method vsearch \
       					     --p-threads 6 \
-      					     --p-perc-identity 0.65 \
-      					     --p-perc-query-aligned 0.60 \
+      					     --p-perc-identity 1.00 \
+      					     --p-perc-query-aligned 1.00 \
       					     --o-sequence-hits core/HitNegCtrl.qza \
       					     --o-sequence-misses core/NegRepSeq.qza
                                          
-                                         # change perc param because https://forum.qiime2.org/t/exclude-seqs-error-with-imported-fasta-file/8662/3
-                                         #--p-perc-identity 1.00 \
-                                         #--p-perc-query-aligned 1.00 \
 
 # table_contamination_filter :
 ##############################
