@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-WORKING_DIRECTORY=/scratch_vol1/fungi/Rhabdastrella_globostellata_microbiome/05_QIIME2
-OUTPUT=/scratch_vol1/fungi/Rhabdastrella_globostellata_microbiome/05_QIIME2/visual
+WORKING_DIRECTORY=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/07_01_Rhabdastrella_globostellata_and_Mycale_microbiome/Rhabdastrella_globostellata_and_Mycale_microbiome/05_QIIME2
+OUTPUT=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/07_01_Rhabdastrella_globostellata_and_Mycale_microbiome/Rhabdastrella_globostellata_and_Mycale_microbiome/05_QIIME2/visual
 
 # Aim: construct a rooted phylogenetic tree
 
