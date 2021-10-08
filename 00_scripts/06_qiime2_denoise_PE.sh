@@ -52,10 +52,14 @@ qiime quality-control exclude-seqs --i-query-sequences core/RepSeq.qza \
       					     --i-reference-sequences $NEG_CONTROL \
       					     --p-method vsearch \
       					     --p-threads 6 \
-      					     --p-perc-identity 1.00 \
-      					     --p-perc-query-aligned 1.00 \
+      					     --p-perc-identity 0.65 \
+      					     --p-perc-query-aligned 0.60 \
       					     --o-sequence-hits core/HitNegCtrl.qza \
       					     --o-sequence-misses core/NegRepSeq.qza
+                                         
+                                         # change perc param because https://forum.qiime2.org/t/exclude-seqs-error-with-imported-fasta-file/8662/3
+                                         #--p-perc-identity 1.00 \
+                                         #--p-perc-query-aligned 1.00 \
 
 # table_contamination_filter :
 ##############################
