@@ -17,7 +17,7 @@ eval "$(conda shell.bash hook)"
 conda activate qiime2-2021.4
 
 
-qiime tools import 
-–input-path contamination_seq.fasta
-–output-path contamination_seq.qza 
-–type ‘FeatureData[Sequence]’
+qiime tools import \
+  --input-path sequences.fna \
+  --output-path sequences.qza \
+  --type 'FeatureData[Sequence]'
