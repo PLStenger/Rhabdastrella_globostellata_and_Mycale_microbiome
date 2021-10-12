@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-WORKING_DIRECTORY=/scratch_vol1/fungi/Rhabdastrella_globostellata_microbiome/05_QIIME2
-OUTPUT=/scratch_vol1/fungi/Rhabdastrella_globostellata_microbiome/05_QIIME2/visual
+WORKING_DIRECTORY=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/07_01_Rhabdastrella_globostellata_and_Mycale_microbiome/Rhabdastrella_globostellata_and_Mycale_microbiome/05_QIIME2
+OUTPUT=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/07_01_Rhabdastrella_globostellata_and_Mycale_microbiome/Rhabdastrella_globostellata_and_Mycale_microbiome/05_QIIME2/visual
 
-DATABASE=/scratch_vol1/fungi/Rhabdastrella_globostellata_microbiome/98_database_files
+DATABASE=/Users/pierre-louisstenger/Documents/PostDoc_02_MetaBarcoding_IAC/02_Data/07_01_Rhabdastrella_globostellata_and_Mycale_microbiome/Rhabdastrella_globostellata_and_Mycale_microbiome/98_database_files
 
 # Aim: perform diversity metrics and rarefaction
 
@@ -36,7 +36,7 @@ mkdir -p export/pcoa
 qiime diversity core-metrics-phylogenetic \
        --i-phylogeny tree/rooted-tree.qza \
        --i-table core/ConTable.qza \
-       --p-sampling-depth 7715 \
+       --p-sampling-depth 2806 \
        --m-metadata-file $DATABASE/sample-metadata.tsv \
        --o-rarefied-table core/RarTable.qza \
        --o-observed-features-vector core/Vector-observed_asv.qza \
