@@ -102,8 +102,8 @@ cp $DATABASE/SILVA-138-SSURef-Full-Seqs.qza taxonomy/DataSeq.qza
 cp $DATABASE/Silva-v138-full-length-seq-taxonomy.qza taxonomy/RefTaxo.qza
 
 qiime feature-classifier extract-reads --i-sequences taxonomy/DataSeq.qza \
-        --p-f-primer 'GTGCCAGCMGCCGCGGTAA' \
-        --p-r-primer 'TCCTCCGCTTATTGATATGC' \
+        --p-f-primer 'AGAGTTTGATCCTGGCTCAG' \
+        --p-r-primer 'ATTACCGCGGCTGCTGG' \
         --o-reads taxonomy/RefSeq.qza 
 
 # Aim: Create a scikit-learn naive_bayes classifier for reads
