@@ -101,6 +101,9 @@ echo $TMPDIR
 cp $DATABASE/SILVA-138-SSURef-Full-Seqs.qza taxonomy/DataSeq.qza
 cp $DATABASE/Silva-v138-full-length-seq-taxonomy.qza taxonomy/RefTaxo.qza
 
+# V1-3 primers: 27F AGAGTTTGATCCTGGCTCAG and 534R ATTACCGCGGCTGCTGG. 
+# From https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4504704/
+
 qiime feature-classifier extract-reads --i-sequences taxonomy/DataSeq.qza \
         --p-f-primer 'AGAGTTTGATCCTGGCTCAG' \
         --p-r-primer 'ATTACCGCGGCTGCTGG' \
